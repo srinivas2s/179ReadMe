@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="100%" height="100%">
+  <style>
+    .node { fill: #2c3e50; transition: fill 0.3s; }
+    .node:hover { fill: #34495e; }
+    .text { fill: #ecf0f1; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; text-anchor: middle; }
+    .title { fill: #2c3e50; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 800; text-anchor: middle; }
+    .line { stroke: #3498db; stroke-width: 3; stroke-dasharray: 10, 5; animation: flow 2s linear infinite; }
+    @keyframes flow {
+      from { stroke-dashoffset: 15; }
+      to { stroke-dashoffset: 0; }
+    }
+    .pulse { animation: pulse-animation 2s infinite; }
+    @keyframes pulse-animation {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+  
+  <rect width="100%" height="100%" fill="#f8f9fa" rx="10"/>
+  
+  <text x="450" y="40" class="title">EDGE IQ: Real-Time Intelligence</text>
+
+  <!-- Connectors -->
+  <line x1="250" y1="150" x2="450" y2="150" class="line" />
+  <line x1="450" y1="150" x2="650" y2="150" class="line" />
+
+  <!-- Nodes -->
+  <!-- Left Node -->
+  <g transform="translate(150, 150)" class="pulse">
+    <circle cx="0" cy="0" r="60" class="node" />
+    <text x="0" y="5" class="text">DATA</text>
+    <text x="0" y="25" class="text" style="font-size: 10px; font-weight: normal;">(Cameras/IoT)</text>
+  </g>
+
+  <!-- Center Node -->
+  <g transform="translate(450, 150)" class="pulse" style="animation-delay: 0.5s;">
+    <rect x="-70" y="-50" width="140" height="100" rx="15" fill="#e74c3c" />
+    <text x="0" y="-5" class="text">EDGE AI</text>
+    <text x="0" y="15" class="text" style="font-size: 10px; font-weight: normal;">Processing</text>
+  </g>
+
+  <!-- Right Node -->
+  <g transform="translate(750, 150)" class="pulse" style="animation-delay: 1s;">
+    <circle cx="0" cy="0" r="60" class="node" />
+    <text x="0" y="5" class="text">ACTION</text>
+    <text x="0" y="25" class="text" style="font-size: 10px; font-weight: normal;">(Operations)</text>
+  </g>
+</svg>
