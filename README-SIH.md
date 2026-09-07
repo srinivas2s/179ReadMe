@@ -9,8 +9,8 @@
 ╚══════╝╚═════╝  ╚═════╝ ╚══════╝    ╚═╝ ╚══▀▀═╝ 
 ```
 
-# EDGE IQ — Smart Retail 🛒
-### *Sense. Understand. Decide. Act. Measure.*
+<h1 align="center">EDGE IQ — Smart Retail</h1>
+<h3 align="center"><em>Sense. Understand. Decide. Act. Measure.</em></h3>
 
 ---
 
@@ -31,7 +31,7 @@
 
 ---
 
-## 🌟 What This Is
+## What This Is
 
 **EDGE IQ** is an edge-first intelligent retail management architecture. It connects physical-store data sources with local intelligence to make real-time operational decisions exactly where they happen. 
 
@@ -47,42 +47,42 @@ Sensors (IoT)   ────┘                 (Actions & Alerts)
 
 ---
 
-## 🏗️ Comprehensive System Architecture
+## Comprehensive System Architecture
 
 EDGE IQ is divided into 5 tightly integrated layers, communicating locally to guarantee low-latency, offline-first reliability.
 
-### 1️⃣ IoT & Sensor Layer (The Senses)
+### 1. IoT & Sensor Layer (The Senses)
 This layer acts as the eyes and nerves of the store, constantly gathering real-time telemetry from physical events.
 - **CCTV Networks:** Captures live visual feeds from checkout counters, aisles, and entry points.
 - **ESP32 & Arduino Nodes:** Distributed microcontrollers monitoring temperature, humidity (for perishable goods), and physical shelf weight.
 - **RFID Scanners:** Instantly recognizes pallet movements and high-value item tracking without line-of-sight.
 - **Barcode & Weight Sensors:** Validates exactly what is placed inside smart trolleys or removed from shelves.
 
-### 2️⃣ Edge AI Server Layer (The Brain)
+### 2. Edge AI Server Layer (The Brain)
 Instead of streaming heavy video feeds to the cloud (which wastes bandwidth and violates privacy), the Edge AI server processes video **locally**.
 - **Computer Vision Pipelines:** Uses optimized models (like YOLOv8/v10) to run **People Tracking**, **Product Detection**, and **Queue Estimation**.
 - **Event Extraction:** The AI throws away the video frames immediately after processing, generating lightweight JSON events: e.g., `{"event": "queue_long", "lane": 3, "count": 8, "timestamp": 1694002345}`.
 - **Privacy-First Processing:** No facial recognition. Customers are tracked as anonymous vectors moving through zones.
 
-### 3️⃣ Edge ERP Layer (The Logic & Command Center)
+### 3. Edge ERP Layer (The Logic & Command Center)
 The ERP listens to the AI and IoT events via an internal **MQTT Broker** and decides what needs to be done.
 - **Inventory Engine:** Cross-references the POS database with CCTV shelf-monitoring. If the POS says "5 items left" but CCTV sees an empty shelf, the ERP flags an "Inventory Mismatch" alert.
 - **FEFO Management Engine:** (First Expired, First Out). Tracks perishables and auto-generates discount promotions on digital displays for items nearing expiration.
 - **Staff Orchestration System:** Pings wearable devices or staff dashboards. *"Restock Aisle 4"* or *"Open Checkout Lane 2"*.
 
-### 4️⃣ Customer Interaction Layer (The Experience)
+### 4. Customer Interaction Layer (The Experience)
 Reducing friction for the shopper by digitizing their physical journey.
 - **Smart Trolley:** A shopping cart fitted with an ESP32, an LCD display, and a barcode scanner. Shoppers scan as they drop items in, see their running total, and bypass checkout lines entirely via digital payment integration.
 - **QR Web Portal:** For shoppers without a smart trolley, scanning a store QR code opens a lightweight web app acting as a self-checkout terminal on their own smartphone.
 
-### 5️⃣ Optional Cloud Layer (The Archive)
+### 5. Optional Cloud Layer (The Archive)
 While the store operates 100% locally, the cloud provides asynchronous multi-store oversight.
 - **Batch Synchronization:** Pushes aggregate sales data and footfall analytics to centralized AWS/GCP buckets during off-peak hours.
 - **Global Dashboards:** Allows regional managers to compare branch performance and train better AI models on massive, anonymized, globally-aggregated datasets.
 
 ---
 
-## 🔄 The Data Flow Loop
+## The Data Flow Loop
 
 ### CAPTURE → ANALYZE → UNDERSTAND → DECIDE → ACT → MEASURE
 
@@ -94,7 +94,7 @@ While the store operates 100% locally, the cloud provides asynchronous multi-sto
 
 ---
 
-## 🛠️ The Technology Stack
+## The Technology Stack
 
 | Component | Technologies & Protocols | Purpose |
 |:---|:---|:---|
@@ -107,21 +107,21 @@ While the store operates 100% locally, the cloud provides asynchronous multi-sto
 
 ---
 
-## 🚀 Key Intelligent Features
+## Key Intelligent Features
 
-### 📦 Smart Inventory & FEFO
+### Smart Inventory & FEFO
 Monitors shelves in real-time. Detects low-stock and out-of-stock instantly via combined CCTV and RFID data. Manages **FEFO (First Expired, First Out)** to automatically suggest markdowns on perishable items, drastically reducing food wastage.
 
-### 👥 Proactive Queue Intelligence
+### Proactive Queue Intelligence
 Transforms checkout-area observations into operational events. Estimates queue length, wait times, and predicts congestion before it escalates, alerting staff immediately to open new lanes.
 
-### ⚡ Offline-First Resilience
+### Offline-First Resilience
 If the store's internet connection fails, the store stays smart.  
 `Edge → Process → Decide → Local Action` continues normally. The local PostgreSQL instance buffers all transaction and event logs. It safely syncs to the cloud only when connectivity is restored.
 
 ---
 
-## 🗺️ System Architecture Map
+## System Architecture Map
 
 ```text
 [ CUSTOMER INTERACTION ]
@@ -153,7 +153,7 @@ If the store's internet connection fails, the store stays smart.
 
 ---
 
-## 💻 Upload & Run
+## Upload & Run
 
 ```bash
 # 1. Clone the repository
@@ -181,7 +181,7 @@ python edge_ai_server.py
 
 ---
 
-## 📊 Expected Advantages
+## Expected Advantages
 
 | Advantage | Why It Matters |
 |---|---|
@@ -196,10 +196,10 @@ python edge_ai_server.py
 <div align="center">
 
 ```text
-  🛒  See the store as data. Act in real-time.  🛒
+See the store as data. Act in real-time.
 ```
 
 **Built for the edge.**  
-If you believe in decentralized intelligence, leave a ⭐ star.
+If you believe in decentralized intelligence, leave a star.
 
 </div>
